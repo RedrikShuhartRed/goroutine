@@ -30,15 +30,7 @@ func Generator(ctx context.Context, ch chan<- int64, fn func(int64)) {
 		}
 
 	}
-	/*defer close(ch)
-	for i := 1; i > 0; i++ {
-		select {
-		case ch <- int64(i):
-			fn(int64(i))
-		case <-ctx.Done():
-			return
-		}
-	}*/
+
 }
 
 // Worker читает число из канала in и пишет его в канал out.
